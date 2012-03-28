@@ -5,6 +5,8 @@ A data store designed to allow the use of any data technology:
  - File system
  - SQL
  - MongoDB
+ 
+This will allow you to design data driven applications with models that are not specific to the source of data.
 
 ## How it works
 
