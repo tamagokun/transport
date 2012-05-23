@@ -16,6 +16,7 @@ class Store
 		$conn = parse_url($dsn);
 		$this->db = basename($conn["path"]);
 		$this->adaptor = Adaptor::find($conn["scheme"]);
+		if($this->adaptor) $this->adaptor->store = $this;
 	}
 
 	public function connect()
@@ -33,8 +34,8 @@ class Store
 		return $this->adaptor->name;
 	}
 	
-	public function transport()
+	public function adaptor()
 	{
-		return $this->adaptor->transport;
+		return $this->adaptor;
 	}
 }

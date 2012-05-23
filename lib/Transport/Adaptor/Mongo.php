@@ -8,7 +8,27 @@ class Mongo extends \Transport\Adaptor
 	public function connect($dsn)
 	{
 		$connection = new \Mongo($dsn);
-		$this->transport = new MongoTransport($connection->selectDB($this->db));
+		$this->transport = $connection->selectDB($this->db);
 		return $connection;
+	}
+
+	public function find($params, $collection)
+	{
+	  
+	}
+
+	public function update($model)
+	{
+	  
+	}
+
+	public function insert($model)
+	{
+	  
+	}
+
+	public function destroy($model)
+	{
+	  
 	}
 }
